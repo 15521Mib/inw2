@@ -9,6 +9,13 @@ const firebaseConfig = {
   
 firebase.initializeApp(firebaseConfig);
 
+function logout(){
+  firebase.auth().signOut().then(()=>{
+    alert("Usuario deslogado")
+  })
+}
+/*
+
 const emailField = document.getElementById('email');
 const passwordField = document.getElementById('password');
 const loginButton = document.getElementById('loginButton');
@@ -28,3 +35,5 @@ loginButton.addEventListener('click', () => {
     console.error('Erro de autenticação:', errorMessage);
     });
 });
+
+*/
